@@ -1,6 +1,9 @@
 const diceRoll = (numberOfDice, numberOfDieSides) => {
   const resultsArray = [];
   const resultsObj = {};
+  resultsObj.numberOfDice = numberOfDice;
+  resultsObj.numberOfDieSides = numberOfDieSides;
+  
   if(numberOfDice > 0){
     for (let i = 0; i < numberOfDice; i++) {
       resultsArray.push(rollDie(numberOfDieSides));
