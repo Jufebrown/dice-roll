@@ -13,4 +13,3 @@ const diceRoll = (numberOfDice, numberOfDieSides) => {
 
   return DiceRollResultsObj;
 }
-
