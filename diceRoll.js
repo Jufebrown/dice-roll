@@ -1,16 +1,16 @@
 const diceRoll = (numberOfDice, numberOfDieSides) => {
   const resultsArray = [];
-  const resultsObj = {};
-  resultsObj.numberOfDice = numberOfDice;
-  resultsObj.numberOfDieSides = numberOfDieSides;
+  const DiceRollResultsObj = {};
+  DiceRollResultsObj.numberOfDice = numberOfDice;
+  DiceRollResultsObj.numberOfDieSides = numberOfDieSides;
   
   for (let i = 0; i < numberOfDice; i++) {
     resultsArray.push(Math.floor(Math.random() * numberOfDieSides) +1);
   }
   
-  resultsObj.results = resultsArray;
-  resultsObj.total = resultsArray.reduce(function(a,b){return a + b;}, 0);
+  DiceRollResultsObj.results = resultsArray;
+  DiceRollResultsObj.total = resultsArray.reduce(function(a,b){return a + b;}, 0);
 
-  return resultsObj;
+  return DiceRollResultsObj;
 }
 
