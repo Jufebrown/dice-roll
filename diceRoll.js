@@ -6,7 +6,7 @@ const diceRoll = (numberOfDice, numberOfDieSides) => {
   
   if(numberOfDice > 0){
     for (let i = 0; i < numberOfDice; i++) {
-      resultsArray.push(rollDie(numberOfDieSides));
+      resultsArray.push(Math.floor(Math.random() * numberOfDieSides) +1);
     }
     resultsObj.results = resultsArray;
     resultsObj.total = resultsArray.reduce(function(a,b){return a + b;}, 0);
@@ -17,6 +17,3 @@ const diceRoll = (numberOfDice, numberOfDieSides) => {
   return resultsObj;
 }
 
-const rollDie = (numberOfDieSides) => {
-  return Math.floor(Math.random() * numberOfDieSides) +1;
-}
